@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ТР-24 Бездрабко Богдан Сергійович</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+    </style>
+</head>
+<body>
+   
+    <header>
+        <div class="header-cont">
+            <div class="header-info">
+                <h1>ТР-24 Бездрабко Богдан Сергійович<br>Тема тесту: Мова розмітки HTML</h1>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- форма реєстрації-->
+        <div class="main-cont">
+            <button id="button_pochati" onclick="start()">
+                <p>Почати тест</p>
+            </button>
+            <div id="registr" hidden>
+                <form id="regForm" onsubmit="return false;">
+                    <label >
+                        <h2>Перед початком теста<br> потрібно заповнити наступні поля:</h2>
+                    </label>
+                    <div class="textInput">
+                        <div class="reg__PIB">
+                            <p> <input id="area1" class="aa" type="text" required placeholder="ПІБ учня"
+                                    name="PIB"></p>
+                        </div>
+                        <div class="reg__group">
+                            <p> <input id="area2" class="aa" type="text" required placeholder="Група" name="group"></p>
+                        </div>
+                    </div>
+                    <button id="registr__button" onclick="blank()">
+                        <p>Реєстрація</p>
+                    </button>
+                </form>
+            </div>
+            <div id="test" hidden>
+
+                <!-- 1 питання-->
+                <div id="Pitannya1" hidden>
+                    <h1>1 Запитання</h1>
+                    <form id="Pitannya1_form">
+                        <label >
+                            <h3>Що означає абревіатура HTML?</h3>
+                        </label>
+                        <div class="Pitannya_var_vidpovidi">
+                            <label for="pick1"><input type="radio" name="pick" id="pick11"> HyperText Markup Language</label>
+                            <label for="pick2"><input type="radio" name="pick" id="pick12"> High-level Text Management Language</label>
+                            <label for="pick3"><input type="radio" name="pick" id="pick13"> Hyperlink and Text Manipulation Language</label>
+                            <label for="pick4"><input type="radio" name="pick" id="pick14"> HyperTransfer Markup Language</label>
+
+                        </div>
+                    </form>
+                </div>
+
+                <!-- 2 питання-->
+                <div id="Pitannya2" hidden>
+                    <h1>2 Запитання</h1>
+                    <form  id="Pitannya2_form">
+                        <label >
+                            <h3> Які з наступних тегів є блочними елементами в HTML? (Виберіть всі вірні варіанти)</h3>
+                        </label>
+                        <div class="Pitannya2_vidpovidi_checkbox">
+                            <label><input type="checkbox" id="pick21">div</label>
+                            <label><input type="checkbox" id="pick22">span</label>
+                            <label><input type="checkbox" id="pick23">p</label>
+                            <label><input type="checkbox" id="pick24">strong</label>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- 3 питання-->
+                <div id="Pitannya3" hidden>
+                    <h1>3 Запитання</h1>
+                    <form id="Pitannya3_form">
+                        <label >
+                            <h3>Які теги використовуються для організації таблиці в HTML? (Оберіть всі вірні варіанти)  " у CSS?</h3>
+                        </label>
+                        <div class="Pitannya3_5_vidpovidi_checkbox">
+                            <label><input type="checkbox" id="pick31">table</label>
+                            <label><input type="checkbox" id="pick32">tr</label>
+                            <label><input type="checkbox" id="pick33">td</label>
+                            <label><input type="checkbox" id="pick34">th</label>
+                        </div>
+                    </form>
+                </div>
+
+               <!-- 4 питання-->
+               <div id="Pitannya4" hidden>
+                <h1>4 Запитання</h1>
+                <form id="Pitannya4_form">
+                    <div class="Pitannya4_vidpovidi_select">
+                        <label>
+                            Який тег використовується для вставки зображення в HTML?
+                            <select id="select1">
+                                <option value="pick41" id="pick41">image</option>
+                                <option value="pick42" id="pick42">img</option>
+                                <option value="pick43" id="pick43">src</option>
+                            </select>
+                        </label>
+                    </div>
+                </form>
+            </div>
+
+            <!-- 5 питання-->
+            <div id="Pitannya5" hidden>
+                <h1>5 Запитання</h1>
+                <form id="Pitannya5_form">
+                    <label >
+                        <h3>Який тег використовується для створення неупорядкованого списку?</h3>
+                    </label>
+                    <div class="Pitannya3_5_vidpovidi_checkbox">
+                        <label><input type="checkbox" id="pick51">li</label>
+                        <label><input type="checkbox" id="pick52">ol</label>
+                        <label><input type="checkbox" id="pick53">ul</label>
+                        
+                    </div>
+                </form>
+            </div>
+
+               <!-- 6 питання-->
+                <div id="Pitannya6" hidden>
+                    <h1>6 Запитання</h1>
+                    <form id="Pitannya6_form">
+                        <div class="fixedElements">
+                            <label>
+                                <h3>Розставте опис у правильному порядку відповідно до властивостей CSS:</h3>
+                            </label>
+                        </div>
+                        <div class="Pitannya6_vidpovidnist" id="dropContainers">
+                            <div class="Pitannya6__boxs1" id="Сontainer1" ondrop="drop(event)" ondragover="allowDrop(event)"> Абзац
+                                <hr id="hr1">
+                            </div>
+                            <div class="Pitannya6__boxs2" id="Container2" ondrop="drop(event)" ondragover="allowDrop(event)">Список з маркерами
+                                <hr id="hr2">
+                            </div>
+                            <div class="Pitannya6__boxs3" id="Container3" ondrop="drop(event)" ondragover="allowDrop(event)">Заголовок четвертого рівня
+                            </div>
+                        </div>
+                        <div class="Pitannya6_vsi_vidpovidi">
+                            <div class="Pitannya6_vidpovid" id="drag1" draggable="true" ondragstart="drag(event)"> p /p </div>
+                            <div class="Pitannya6_vidpovid" id="drag2" draggable="true" ondragstart="drag(event)"> ul  li Item 1 /li li Item 2 /li  /ul </div>
+                            <div class="Pitannya6_vidpovid" id="drag3" draggable="true" ondragstart="drag(event)">h4 /h4</div>
+                        </div>
+                    </form>
+                </div>
+
+
+
+                <!-- 7 питання-->
+                <div id="Pitannya7" hidden>
+                    <h1>7 Запитання</h1>
+                    <form  id="Pitannya7_form">
+                        <label>
+                            <h3>Як правильно використовувати тег meta charset="UTF-8" для визначення кодування сторінки?</h3>
+                        </label>
+                        <div class="Pitannya_var_vidpovidi">
+                            <label for="pick1"><input type="radio" name="pick" id="pick71"> вставити в head</label>
+                            <label for="pick2"><input type="radio" name="pick" id="pick72"> Вставити в body</label>
+                            <label for="pick3"><input type="radio" name="pick" id="pick73"> не вставляти</label>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- 8 питання-->
+                <div id="Pitannya8" hidden>
+                    <h1>8 Запитання</h1>
+                    <form  id="Pitannya8_form">
+                        <label>
+                            <h3>Як визначити атрибут класу для елементу в HTML?
+                            </h3>
+                        </label>
+                        <div class="Pitannya_var_vidpovidi">
+                            <label for="pick1"><input type="radio" name="pick" id="pick81">div style="example"</label>
+                            <label for="pick2"><input type="radio" name="pick" id="pick82"> div class="example"</label>
+                            <label for="pick3"><input type="radio" name="pick" id="pick83">div type="example"</label>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- 9 питання-->
+                <div id="Pitannya9" hidden>
+                    <h1>9 Запитання</h1>
+                    <form  id="Pitannya9_form">
+                        <label>
+                            <h3>Які атрибути можна використовувати для тега img у HTML? </h3>
+                        </label>
+                        <div class="Pitannya9_vidpovidi_checkbox">
+                            <label><input type="checkbox" id="pick91">src</label>
+                            <label><input type="checkbox" id="pick92">alt</label>
+                            <label><input type="checkbox" id="pick93">border</label>
+                            <label><input type="checkbox" id="pick94">title</label>
+                            <label><input type="checkbox" id="pick95">link</label>
+                            <label><input type="checkbox" id="pick96">width</label>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- 10 питання-->
+                <div id="Pitannya10" hidden>
+                    <h1>10 Запитання!</h1>
+                    <form id="Pitannya10_form">
+                        <label >
+                            <h3>  Що таке елемент у контексті HTML? Вкажіть 1 відповідь</h3>
+                        </label>
+                        <div class="Pitannya10_var_vidpovidi">
+                            <label for="pick1"><input type="radio" name="pick" id="pick101">
+                                Тег размітки
+                            </label>
+                            <label for="pick2"><input type="radio" name="pick" id="pick102">
+                                Лінія коду
+                            </label>
+                            <label for="pick3"><input type="radio" name="pick" id="pick103">
+                                Властивість
+                            </label>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- наступне питання-->
+                <button id="next__button" onclick="nextQuestion()">
+                    <p>Відповісти</p>
+                </button>
+            </div>
+
+            <!-- результат тесту-->
+            <section>
+                <div id="resultTest" hidden>
+                    <h1>Результат</h1>
+                    <p id="PIBuchnya">ПІБ Учня: </p>
+                    <p id="resGroup">Група: </p>
+                    <p id="resRating">Оцінка: </p>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
